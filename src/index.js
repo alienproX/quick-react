@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import {Router, browserHistory} from 'react-router'
 import {createStore} from 'redux'
+import { Provider } from 'react-redux'
 
 import './assets/reset.scss'
 
@@ -43,8 +44,7 @@ const routeConfig = {
   ]
 }
 
-const render = () => ReactDOM.render(
-  <Router history={browserHistory} routes={routeConfig}/>, document.getElementById('root'))
-
-render()
-store.subscribe(render)
+ReactDOM.render(
+  <Provider store={store}>
+    <Router history={browserHistory} routes={routeConfig}/>
+  </Provider>, document.getElementById('root'))

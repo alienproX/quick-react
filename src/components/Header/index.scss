@@ -8,9 +8,16 @@
     li {
       float: left;
       display: block;
-      height: 30px;
-      line-height: 30px;
-      padding: 0px 20px;
+
+      a {
+        display: block;
+        height: 30px;
+        line-height: 30px;
+        padding: 0 20px;
+        &.active{
+          background: #fff;
+        }
+      }
     }
   }
 }
