@@ -1,16 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {Router, browserHistory} from 'react-router'
-import {createStore} from 'redux'
 import { Provider } from 'react-redux'
+import configStore from './store'
 
 import './assets/reset.scss'
 
 import App from './App.jsx'
 import NoMatch from './components/NoMatch'
-import counter from './reducers'
-
-const store = createStore(counter)
 
 const routeConfig = {
   path: '/',
@@ -45,6 +42,6 @@ const routeConfig = {
 }
 
 ReactDOM.render(
-  <Provider store={store}>
+  <Provider store={configStore()}>
     <Router history={browserHistory} routes={routeConfig}/>
   </Provider>, document.getElementById('root'))

@@ -2,7 +2,7 @@ import {INCREMENT, DECREMENT, RANGECHANGE} from '../actions'
 import initialState from '../store/state'
 import merge from './merge'
 
-export default(state = initialState, action) => {
+export default (state = initialState, action) => {
   switch (action.type) {
     case INCREMENT:
       return merge(state, {

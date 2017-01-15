@@ -1,42 +1,42 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
+import './index.scss'
 
 class Counter extends Component {
-
+  rangeChange = () => {
+    this.props.dispatch({
+      type: 'RANGECHANGE',
+      num: + this.input.value
+    })
+  }
   render() {
-    const {value, dispatch} = this.props
-    const onIncrement = () => dispatch({type: 'INCREMENT'})
-    const onDecrement = () => dispatch({type: 'DECREMENT'})
-    const incrementIfOdd = () => {
-      if (this.props.value % 2 !== 0) {
-        onIncrement()
-      }
-    }
-    const incrementAsync = () => {
-      setTimeout(onIncrement, 1000)
-    }
+    const {state, dispatch} = this.props
+    const onIncrement = () => dispatch({
+      type: 'INCREMENT',
+      num: + this.input.value
+    })
+    const onDecrement = () => dispatch({
+      type: 'DECREMENT',
+      num: + this.input.value
+    })
+
     return (
-      <p>
-        Clicked: {value}
-        times {' '}
+      <div id="Counter">
+        Result:
+        <span>
+          {state.value}
+        </span>
         <button onClick={onIncrement}>
-          +
+          +{state.randomNum}
         </button>
         {' '}
         <button onClick={onDecrement}>
-          -
+          -{state.randomNum}
         </button>
-        {' '}
-        <button onClick={incrementIfOdd}>
-          Increment if odd
-        </button>
-        {' '}
-        <button onClick={incrementAsync}>
-          Increment async
-        </button>
-      </p>
+        <input type="range" min="1" max="10" value={state.randomNum} onChange={this.rangeChange} ref={(input) => this.input = input}/>
+      </div>
     )
   }
 }
 
-export default connect(state => ({value: state}))(Counter)
+export default connect(state => ({state: state.counter}))(Counter)

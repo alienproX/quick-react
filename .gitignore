@@ -1,13 +1,13 @@
-## dependencies
+# dependencies
 node_modules
 
-## testing
+# testing
 coverage
 
-## production
-build
+# production
+dist
 
-## misc
+# misc
 .DS_Store
 .env
 npm-debug.log

@@ -1,0 +1,27 @@
+#Counter {
+	color: #888;
+
+	span {
+		display: inline-block;
+		min-width: 24px;
+		color: #666;
+		font-weight: bold;
+		margin-left: 5px;
+	}
+
+	button {
+		display: inline-block;
+		min-width: 40px;
+		border: 1px solid #ccc;
+		border-radius: 2px;
+		background: #f5f5f5;
+		color: #666;
+		margin-left: 5px;
+		cursor: pointer;
+		outline: none;
+	}
+
+	input {
+		margin-left: 10px;
+	}
+}
