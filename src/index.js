@@ -35,6 +35,13 @@ const routeConfig = {
         })
       }
     }, {
+      path: 'todo',
+      getComponent(nextState, callback) {
+        require.ensure([], (require) => {
+          callback(null, require('./views/Todo/index.jsx').default)
+        })
+      }
+    }, {
       path: '*',
       component: NoMatch
     }

@@ -39,4 +39,4 @@ class Counter extends Component {
   }
 }
 
-export default connect(state => ({state: state.counter}))(Counter)
+export default connect(state => ({state: state.counterReducer}))(Counter)

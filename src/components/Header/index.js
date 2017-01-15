@@ -16,6 +16,9 @@ class App extends Component {
           <li>
             <Link to="/counter" activeClassName="active">Counter</Link>
           </li>
+          <li>
+            <Link to="/todo" activeClassName="active">Todo</Link>
+          </li>
         </ul>
       </div>
     )
