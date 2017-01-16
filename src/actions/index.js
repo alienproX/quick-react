@@ -1,6 +1,7 @@
 export const INCREMENT = 'INCREMENT'
 export const DECREMENT = 'DECREMENT'
-export const RANGECHANGE = 'RANGECHANGE'
+export const ADDITION_CHANGE = 'ADDITION_CHANGE'
+export const SUBSTRUCTION_CHANGE = 'SUBSTRUCTION_CHANGE'
 export const ADD_TODO = 'ADD_TODO'
 export const REMOVE_TODO = 'REMOVE_TODO'
 export const TEXT_CHANGE = 'TEXT_CHANGE'

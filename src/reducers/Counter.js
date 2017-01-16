@@ -1,12 +1,13 @@
-import {INCREMENT, DECREMENT, RANGECHANGE} from '../actions'
+import {INCREMENT, DECREMENT, ADDITION_CHANGE, SUBSTRUCTION_CHANGE} from '../actions'
 import merge from './merge'
 
 const initialState = {
-  randomNum: 1,
+  addition: 1,
+  substruction: 1,
   value: 0
 }
 
-export default (state = initialState, action) => {
+export default(state = initialState, action) => {
   switch (action.type) {
     case INCREMENT:
       return merge(state, {
@@ -16,8 +17,10 @@ export default (state = initialState, action) => {
       return merge(state, {
         value: state.value -= action.num
       })
-    case RANGECHANGE:
-      return merge(state, {randomNum: action.num})
+    case ADDITION_CHANGE:
+      return merge(state, {addition: action.num})
+    case SUBSTRUCTION_CHANGE:
+      return merge(state, {substruction: action.num})
     default:
       return state
   }
