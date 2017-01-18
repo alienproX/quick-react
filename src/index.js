@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {Router, browserHistory} from 'react-router'
-import { Provider } from 'react-redux'
+import {Provider} from 'react-redux'
 import configStore from './store'
 
 import './assets/reset.scss'
@@ -9,11 +9,13 @@ import './assets/reset.scss'
 import App from './App.jsx'
 import NoMatch from './components/NoMatch'
 
+const store = configStore()
+
 const routeConfig = {
   path: '/',
   component: App,
   indexRoute: {
-    getComponent(nextState, callback) {
+    getComponent: (nextState, callback) => {
       require.ensure([], (require) => {
         callback(null, require('./views/Home/index.jsx').default)
       })
@@ -49,6 +51,6 @@ const routeConfig = {
 }
 
 ReactDOM.render(
-  <Provider store={configStore()}>
-    <Router history={browserHistory} routes={routeConfig}/>
-  </Provider>, document.getElementById('root'))
+  <Provider store={store}>
+  <Router history={browserHistory} routes={routeConfig}/>
+</Provider>, document.getElementById('root'))

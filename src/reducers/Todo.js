@@ -14,7 +14,6 @@ const initialState = {
 export default(state = initialState, action) => {
   switch (action.type) {
     case ADD_TODO:
-      console.log()
       let newID = state.todos.length === 0 ? 0 : (state.todos[state.todos.length - 1].id + 1)
       let newTodos = state.todos.concat({id: newID, text: state.tempText})
       return merge(state, {

@@ -1,11 +1,15 @@
 import React, {Component} from 'react'
 import {IndexLink, Link} from 'react-router'
+import {connect} from 'react-redux'
+import ProcessBar from '../ProcessBar'
 import './index.scss'
 
-class App extends Component {
+class Header extends Component {
   render() {
+    const {state} = this.props
     return (
       <div id="header">
+        <ProcessBar width={state.processBarWidth} />
         <ul>
           <li>
             <IndexLink to="/" activeClassName="active">Home</IndexLink>
@@ -25,4 +29,4 @@ class App extends Component {
   }
 }
 
-export default App
+export default connect(state => ({state: state.Header}))(Header)

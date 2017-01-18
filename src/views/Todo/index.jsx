@@ -36,4 +36,4 @@ class Todo extends Component {
   }
 }
 
-export default connect(state => ({state: state.todoReducer}))(Todo)
+export default connect(state => ({state: state.Todo}))(Todo)
