@@ -9,7 +9,7 @@ class Header extends Component {
     const {state} = this.props
     return (
       <div id="header">
-        <ProcessBar width={state.processBarWidth} />
+        <ProcessBar width={state.processBarWidth} transition={state.processTransition} />
         <ul>
           <li>
             <IndexLink to="/" activeClassName="active">Home</IndexLink>

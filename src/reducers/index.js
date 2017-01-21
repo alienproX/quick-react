@@ -1,19 +1,18 @@
-import {PROCESSBAR_START, PROCESSBAR_END} from '../actions'
+import {PROCESSBAR} from '../actions'
 import merge from './merge'
 
 const initialState = {
-  processBarWidth: 0
+  processBarWidth: 0,
+  processTransition: '0.2s'
 }
 
 export default(state = initialState, action) => {
   switch (action.type) {
-    case PROCESSBAR_START:
+    case PROCESSBAR:
+      const transition = action.transition ? action.transition : 0.2
       return merge(state, {
-        processBarWidth: 0
-      })
-    case PROCESSBAR_END:
-      return merge(state, {
-        processBarWidth: '100%'
+        processBarWidth: action.val,
+        processTransition: transition + 's'
       })
     default:
       return state
