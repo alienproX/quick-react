@@ -4,6 +4,7 @@ import {Router, browserHistory} from 'react-router'
 import {Provider} from 'react-redux'
 import configStore from './store'
 import Process from './components/ProcessBar/action'
+import FastClick from 'fastclick'
 
 import './assets/reset.scss'
 
@@ -65,3 +66,5 @@ ReactDOM.render(
   <Provider store={store}>
   <Router history={browserHistory} routes={routeConfig}/>
 </Provider>, document.getElementById('root'))
+
+FastClick.attach(document.body)

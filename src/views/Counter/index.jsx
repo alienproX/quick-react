@@ -15,7 +15,7 @@ class Counter extends Component {
   render() {
     const {state, dispatch} = this.props
     const onIncrement = () => dispatch(compute('+', this.additionInput.value))
-    const onDecrement = () => dispatch(compute('-', this.additionInput.value))
+    const onDecrement = () => dispatch(compute('-', this.substructionInput.value))
 
     return (
       <div id="Counter">
@@ -23,15 +23,18 @@ class Counter extends Component {
         <span>
           {state.value}
         </span>
-        <button onClick={onIncrement}>
-          +{state.addition}
-        </button>
-        <input type="range" min="1" max="10" value={state.addition} onChange={this.additionChange}  ref={(input) => this.additionInput = input} />
-        {' '}
-        <button onClick={onDecrement} className="substruction">
-          -{state.substruction}
-        </button>
-        <input type="range" min="1" max="10" value={state.substruction} onChange={this.substructionChange} ref={(input) => this.substructionInput = input}/>
+        <p>
+          <button onClick={onIncrement}>
+            +{state.addition}
+          </button>
+          <input type="range" min="1" max="10" value={state.addition} onChange={this.additionChange}  ref={(input) => this.additionInput = input} />
+        </p>
+        <p>
+          <button onClick={onDecrement} className="substruction">
+            -{state.substruction}
+          </button>
+          <input type="range" min="1" max="10" value={state.substruction} onChange={this.substructionChange} ref={(input) => this.substructionInput = input}/>
+        </p>
       </div>
     )
   }
