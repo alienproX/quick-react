@@ -1,4 +1,4 @@
-import {INCREMENT, DECREMENT, ADDITION_CHANGE, SUBSTRUCTION_CHANGE} from '../actions'
+import {INCREMENT, DECREMENT, ADDITION_CHANGE, SUBSTRUCTION_CHANGE} from '../actions/Counter'
 import merge from './merge'
 
 const initialState = {

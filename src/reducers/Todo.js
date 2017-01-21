@@ -1,4 +1,4 @@
-import {ADD_TODO, TEXT_CHANGE, REMOVE_TODO} from '../actions'
+import {ADD_TODO, TEXT_CHANGE, REMOVE_TODO} from '../actions/Todo'
 import merge from './merge'
 
 const initialState = {

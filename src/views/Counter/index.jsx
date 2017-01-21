@@ -1,32 +1,21 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
+import {compute, numChange} from '../../actions/Counter'
 import './index.scss'
 
 class Counter extends Component {
   substructionChange = () => {
-    this.props.dispatch({
-      type: 'SUBSTRUCTION_CHANGE',
-      num: + this.substructionInput.value
-    })
+    this.props.dispatch(numChange('-', this.substructionInput.value))
   }
 
   additionChange = (val) => {
-    this.props.dispatch({
-      type: 'ADDITION_CHANGE',
-      num: + this.additionInput.value
-    })
+    this.props.dispatch(numChange('+', this.additionInput.value))
   }
 
   render() {
     const {state, dispatch} = this.props
-    const onIncrement = () => dispatch({
-      type: 'INCREMENT',
-      num: + this.additionInput.value
-    })
-    const onDecrement = () => dispatch({
-      type: 'DECREMENT',
-      num: + this.substructionInput.value
-    })
+    const onIncrement = () => dispatch(compute('+', this.additionInput.value))
+    const onDecrement = () => dispatch(compute('-', this.additionInput.value))
 
     return (
       <div id="Counter">
