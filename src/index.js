@@ -13,16 +13,16 @@ import NoMatch from './components/NoMatch'
 
 const store = configStore()
 
-const process = Process(store)
+const setProcess = Process(store)
 
 const routeConfig = {
   path: '/',
   component: App,
   indexRoute: {
     getComponent: (nextState, callback) => {
-      process.start()
+      setProcess.start()
       require.ensure([], (require) => {
-        process.end()
+        setProcess.end()
         callback(null, require('./views/Home/index.jsx').default)
       })
     }
@@ -31,27 +31,27 @@ const routeConfig = {
     {
       path: 'about',
       getComponent(nextState, callback) {
-        process.start()
+        setProcess.start()
         require.ensure([], (require) => {
-          process.end()
+          setProcess.end()
           callback(null, require('./views/About/index.jsx').default)
         })
       }
     }, {
       path: 'counter',
       getComponent(nextState, callback) {
-        process.start()
+        setProcess.start()
         require.ensure([], (require) => {
-          process.end()
+          setProcess.end()
           callback(null, require('./views/Counter/index.jsx').default)
         })
       }
     }, {
       path: 'todo',
       getComponent(nextState, callback) {
-        process.start()
+        setProcess.start()
         require.ensure([], (require) => {
-          process.end()
+          setProcess.end()
           callback(null, require('./views/Todo/index.jsx').default)
         })
       }
