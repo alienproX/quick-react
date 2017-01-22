@@ -1,10 +1,10 @@
 import React, {Component} from 'react'
-import './index.scss'
+import styles from './index.scss'
 
 class ProcessBar extends Component {
   render() {
     return (
-      <div id="ProcessBar" style={{width: this.props.width, transition: this.props.transition}}></div>
+      <div className={styles.ProcessBar} style={{width: this.props.width, transition: this.props.transition}}></div>
     )
   }
 }

@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {compute, numChange} from '../../actions/Counter'
 import $ from '../../untils'
-import './index.scss'
+import styles from './index.scss'
 
 class Counter extends Component {
   componentDidMount = () => {
@@ -23,7 +23,7 @@ class Counter extends Component {
     const onDecrement = () => dispatch(compute('-', this.substructionInput.value))
 
     return (
-      <div id="Counter">
+      <div className={styles.Counter}>
         Result:
         <span>
           {state.value}

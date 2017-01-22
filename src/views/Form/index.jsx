@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import $ from '../../untils'
-import './index.scss'
+import styles from './index.scss'
 
 class Form extends Component {
   componentDidMount = () => {
@@ -8,7 +8,7 @@ class Form extends Component {
   }
   render() {
     return (
-      <div className='Form'>
+      <div className={styles.Form}>
         about
       </div>
     )

@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import $ from '../../untils'
-import './index.scss'
+import styles from './index.scss'
 
 class Todo extends Component {
   componentDidMount = () => {
@@ -20,7 +20,7 @@ class Todo extends Component {
   render() {
     const {state} = this.props
     return (
-      <div id="Todo">
+      <div className={styles.Todo}>
         <ul>
           {state.todos.map((item, index) => {
             return (
@@ -32,7 +32,7 @@ class Todo extends Component {
             )
           })}
         </ul>
-        <div className="add">
+        <div className={styles.add}>
           <input type="text" value={state.tempText} onChange={this.textChange} ref={(input) => this.input = input}/>
           <button disabled={!state.tempText} onClick={this.addTodo}>Add</button>
         </div>
