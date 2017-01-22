@@ -4,7 +4,7 @@ For quick start a React Web App project. The project based on **[React](https://
 
 Online Demo https://mblur.com/demos/react/
 
-The project including four pages. Every page has independent folder, supports dynamically load.
+The project including four Demo pages. Every page has independent folder, supports dynamically load.
 
 ```
 src/
@@ -37,7 +37,7 @@ git clone https://github.com/cattla/quick-react.git
 
 ### Install Package
 ```sh
-yarn Install
+yarn install
 ```
 ### Start
 ```sh
@@ -46,7 +46,7 @@ yarn start
 Runs the project in development mode. Supports hot reloading, print build errors and lint warnings in the terminal console.
 
 ### Test
-```sh
+```
 yarn test
 ```
 Runs the test watcher in an interactive mode.  By default, runs tests related to files changes since the last commit.
