@@ -1,6 +1,6 @@
 # Quick React
 
-For quick start a React Web App project. The project based on **[React](https://facebook.github.io/react/)**,  **[React Router](https://github.com/ReactTraining/react-router)**, **[Redux](http://redux.js.org/)**, **[SASS](http://sass-lang.com/)** and [webpack](https://webpack.github.io/docs/).
+For quick start a React Web App project. The project based on **[React](https://facebook.github.io/react/)**,  **[React Router](https://github.com/ReactTraining/react-router)**, **[Redux](http://redux.js.org/)**, **[SASS](http://sass-lang.com/)** and **[webpack](https://webpack.github.io/docs/)**.
 
 Online Demo https://mblur.com/demos/react/
 
