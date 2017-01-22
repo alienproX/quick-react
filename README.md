@@ -28,7 +28,7 @@ Recommend to use Chrome extension [Redux DevTools](https://chrome.google.com/web
 
 ## Getting Started
 
-You’ll need to have Node >= 4 on your machine, Recommend to use Node >= 6 and [Yarn](https://yarnpkg.com/)(instead of npm).
+You’ll need to have Node >= 4 on your machine, Recommend to use Node >= 6 and **[Yarn](https://yarnpkg.com/)** (instead of npm).
 
 ### Clone
 ```sh
