@@ -1,14 +1,34 @@
 # Quick React
 
-For quick start a React Web App project. The project based on **[React](https://facebook.github.io/react/)**,  [React Router](https://github.com/ReactTraining/react-router), [Redux](http://redux.js.org/), [SASS](http://sass-lang.com/).
-
-![React App](https://raw.githubusercontent.com/cattla/cattla.github.io/master/files/react_app.png)
+For quick start a React Web App project. The project based on **[React](https://facebook.github.io/react/)**,  **[React Router](https://github.com/ReactTraining/react-router)**, **[Redux](http://redux.js.org/)**, **[SASS](http://sass-lang.com/)** and [webpack](https://webpack.github.io/docs/).
 
 Online Demo https://mblur.com/demos/react/
 
+The project including four pages. Every page has independent folder, supports dynamically load.
+
+```
+src/
+  actions/
+  assets/
+  components/
+  reducers/
+	views/
+		Home/
+		About/
+		Counter/
+		Todo/
+	store/
+    App.jsx
+    index.js
+```
+
+Recommend to use Chrome extension [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd).
+
+![React App](https://raw.githubusercontent.com/cattla/cattla.github.io/master/files/react_app.png)
+
 ## Getting Started
 
-You’ll need to have Node >= 4 on your machine, We strongly recommend to use Node >= 6 and [Yarn](https://yarnpkg.com/)(instead of npm).
+You’ll need to have Node >= 4 on your machine, Recommend to use Node >= 6 and [Yarn](https://yarnpkg.com/)(instead of npm).
 
 ### Clone
 ```sh
