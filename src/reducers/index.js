@@ -1,5 +1,5 @@
 import {PROCESSBAR} from '../actions'
-import merge from './merge'
+import $ from '../untils'
 
 const initialState = {
   processBarWidth: 0,
@@ -10,7 +10,7 @@ export default(state = initialState, action) => {
   switch (action.type) {
     case PROCESSBAR:
       const transition = action.transition ? action.transition : 0.2
-      return merge(state, {
+      return $.merge(state, {
         processBarWidth: action.val,
         processTransition: transition + 's'
       })

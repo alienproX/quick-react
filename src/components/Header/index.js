@@ -15,13 +15,13 @@ class Header extends Component {
             <IndexLink to="/" activeClassName="active">Home</IndexLink>
           </li>
           <li>
-            <Link to="/about" activeClassName="active">About</Link>
-          </li>
-          <li>
             <Link to="/counter" activeClassName="active">Counter</Link>
           </li>
           <li>
             <Link to="/todo" activeClassName="active">Todo</Link>
+          </li>
+          <li>
+            <Link to="/form" activeClassName="active">Form</Link>
           </li>
         </ul>
       </div>

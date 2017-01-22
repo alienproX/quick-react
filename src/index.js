@@ -29,12 +29,12 @@ const routeConfig = {
   },
   childRoutes: [
     {
-      path: 'about',
+      path: 'form',
       getComponent(nextState, callback) {
         setProcess.start()
         require.ensure([], (require) => {
           setProcess.end()
-          callback(null, require('./views/About/index.jsx').default)
+          callback(null, require('./views/Form/index.jsx').default)
         })
       }
     }, {

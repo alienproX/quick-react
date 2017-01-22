@@ -1,8 +1,13 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
+import $ from '../../untils'
 import './index.scss'
 
 class Todo extends Component {
+  componentDidMount = () => {
+    $.setDocTitle(`Todo`)
+  }
+
   textChange = () => {
     this.props.dispatch({type: 'TEXT_CHANGE', text: this.input.value})
   }

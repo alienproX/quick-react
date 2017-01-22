@@ -1,9 +1,14 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {compute, numChange} from '../../actions/Counter'
+import $ from '../../untils'
 import './index.scss'
 
 class Counter extends Component {
+  componentDidMount = () => {
+    $.setDocTitle(`Counter`)
+  }
+
   substructionChange = () => {
     this.props.dispatch(numChange('-', this.substructionInput.value))
   }

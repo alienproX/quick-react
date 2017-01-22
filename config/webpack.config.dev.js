@@ -141,7 +141,7 @@ module.exports = {
       // in development "style" loader enables hot editing of CSS.
       {
         test: /\.css$/,
-        loader: 'style!css?importLoaders=1!postcss'
+        loader: 'style-loader!css-loader?modules'
       },
       {
         test: /\.scss$/,
