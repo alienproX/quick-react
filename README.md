@@ -8,7 +8,7 @@ The project including four Demo pages. Every page has independent folder, suppor
 
 Recommend to use Chrome extension [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd).
 
-![React App](https://raw.githubusercontent.com/cattla/cattla.github.io/master/files/react_app_1.png)
+![React App](https://raw.githubusercontent.com/cattla/cattla.github.io/master/files/react_app_2.png)
 
 ## Getting Started
 
