@@ -1,3 +1,34 @@
-.Form{
-	background: red;
+.Form {
+	h2 {
+		font-size: 24px;
+	}
+
+	li {
+		border-bottom: 1px dotted #ccc;
+		padding: 10px 0 0 100px;
+		position: relative;
+
+		span {
+			position: absolute;
+			width: 90px;
+			display: block;
+			left: 0;
+			margin-top: 6px;
+		}
+
+		input[type="text"] {
+			border: 1px solid #ccc;
+			height: 20px;
+			padding: 2px 5px;
+		}
+
+		p {
+			height: 18px;
+			margin-top: 2px;
+		}
+
+		label {
+			margin-right: 20px;
+		}
+	}
 }
