@@ -9,7 +9,7 @@ class Home extends Component {
   render() {
     return (
       <div id="Home">
-        this is home
+        quick start a React Web App project <a href="https://github.com/cattla/quick-react">fork on github</a>
       </div>
     )
   }

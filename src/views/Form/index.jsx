@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {updateData} from '../../actions/Form'
+import {updateFormAction, updateSelectAction, resetAction} from '../../actions/Form'
 import $ from '../../untils'
 import styles from './index.scss'
 
@@ -8,14 +8,21 @@ class Form extends Component {
   componentDidMount = () => {
     $.setDocTitle(`Form`)
   }
-  updateData = updateData(this.props, this.props.state)
+  updateForm = (key, val, reg) => {
+    updateFormAction(this.props, key, val, reg)
+  }
 
-  updateForm = this.updateData.updateForm
+  updateSelect = (e, key) => {
+    updateSelectAction(this.props, e, key)
+  }
 
-  updateSelect = this.updateData.updateSelect
+  submit = () => {
+    alert(JSON.stringify(this.props.state))
+  }
 
-  submit = this.updateData.submit
-
+  reset = () => {
+    resetAction(this.props)
+  }
   render() {
     const {state} = this.props
     return (
@@ -40,15 +47,15 @@ class Form extends Component {
           </li>
           <li>
             <span>checkbox</span>
-            <label><input type="checkbox" value="A" onChange={(e) => this.updateSelect(e, 'checkbox')}/>A</label>
-            <label><input type="checkbox" value="B" onChange={(e) => this.updateSelect(e, 'checkbox')}/>B</label>
-            <label><input type="checkbox" value="C" onChange={(e) => this.updateSelect(e, 'checkbox')}/>C</label>
+            <label><input type="checkbox" value="A" checked={state.checkbox.indexOf('A') > -1} onChange={(e) => this.updateSelect(e, 'checkbox')}/>A</label>
+            <label><input type="checkbox" value="B" checked={state.checkbox.indexOf('B') > -1} onChange={(e) => this.updateSelect(e, 'checkbox')}/>B</label>
+            <label><input type="checkbox" value="C" checked={state.checkbox.indexOf('C') > -1} onChange={(e) => this.updateSelect(e, 'checkbox')}/>C</label>
             <p>{state.checkbox.join('-')}</p>
           </li>
 
           <li>
             <span>select</span>
-            <select defaultValue={state.select} onChange={() => this.updateForm('select', this.select.value)} ref={(select) => this.select = select}>
+            <select value={state.select } onChange={() => this.updateForm('select', this.select.value)} ref={(select) => this.select = select}>
               <option value=""></option>
               <option value="option A">option A</option>
               <option value="option B">option B</option>
@@ -58,6 +65,7 @@ class Form extends Component {
           </li>
           <li>
             <button onClick={this.submit}>SUBMIT</button>
+            <button onClick={this.reset}>RESET</button>
           </li>
         </ul>
       </div>

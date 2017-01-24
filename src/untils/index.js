@@ -3,6 +3,9 @@ import merge from './merge'
 const utils = {
   version: 0.01,
   merge: merge,
+  stateClone: (o) => {
+  return JSON.parse(JSON.stringify(o))
+  },
   isWeChat: () => (/micromessenger/i).test(navigator.userAgent),
   isEmail: (mail) => /^\w+((-\w+)|(\.\w+))*@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/.test(mail),
   fullTwo: num => num > 9
