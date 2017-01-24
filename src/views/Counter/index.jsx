@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {compute, numChange} from '../../actions/Counter'
+import {updateData} from '../../actions/Counter'
 import $ from '../../untils'
 import styles from './index.scss'
 
@@ -8,20 +8,14 @@ class Counter extends Component {
   componentDidMount = () => {
     $.setDocTitle(`Counter`)
   }
+  updateData = updateData(this.props, this.props.state)
 
-  substructionChange = () => {
-    this.props.dispatch(numChange('-', this.substructionInput.value))
-  }
+  numChange = this.updateData.numChange
 
-  additionChange = (val) => {
-    this.props.dispatch(numChange('+', this.additionInput.value))
-  }
+  compute = this.updateData.compute
 
   render() {
-    const {state, dispatch} = this.props
-    const onIncrement = () => dispatch(compute('+', this.additionInput.value))
-    const onDecrement = () => dispatch(compute('-', this.substructionInput.value))
-
+    const {state} = this.props
     return (
       <div className={styles.Counter}>
         Result:
@@ -29,16 +23,16 @@ class Counter extends Component {
           {state.value}
         </span>
         <p>
-          <button onClick={onIncrement}>
+          <button onClick={() => this.compute('+', this.additionInput.value)}>
             +{state.addition}
           </button>
-          <input type="range" min="1" max="10" value={state.addition} onChange={this.additionChange}  ref={(input) => this.additionInput = input} />
+          <input type="range" min="1" max="10" value={state.addition} onChange={() => this.numChange('+', this.additionInput.value)}  ref={(input) => this.additionInput = input} />
         </p>
         <p>
-          <button onClick={onDecrement} className="substruction">
+          <button onClick={() => this.compute('-', this.substructionInput.value)} className="substruction">
             -{state.substruction}
           </button>
-          <input type="range" min="1" max="10" value={state.substruction} onChange={this.substructionChange} ref={(input) => this.substructionInput = input}/>
+          <input type="range" min="1" max="10" value={state.substruction} onChange={() => this.numChange('-', this.substructionInput.value)} ref={(input) => this.substructionInput = input}/>
         </p>
       </div>
     )

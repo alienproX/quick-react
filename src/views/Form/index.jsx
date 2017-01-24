@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
+import {updateData} from '../../actions/Form'
 import $ from '../../untils'
 import styles from './index.scss'
 
@@ -7,26 +8,14 @@ class Form extends Component {
   componentDidMount = () => {
     $.setDocTitle(`Form`)
   }
-  updateForm = (key, val, reg) => {
-    this.props.dispatch({type: 'UPDATE_FORM', key: key, val: val, reg: reg})
-  }
+  updateData = updateData(this.props, this.props.state)
 
-  updateSelect = (e, key) => {
-    let orginalArray = this.props.state[key]
-    let isChecked = e.target.checked
-    let value = e.target.value
-    if(isChecked) {
-      orginalArray.push(value)
-    } else {
-      orginalArray.splice(orginalArray.indexOf(value), 1)
-    }
-    orginalArray = [...new Set(orginalArray)]
-    this.props.dispatch({type: 'UPDATE_FORM', key: key, val: orginalArray})
-  }
+  updateForm = this.updateData.updateForm
 
-  submit = () => {
-    alert(JSON.stringify(this.props.state))
-  }
+  updateSelect = this.updateData.updateSelect
+
+  submit = this.updateData.submit
+
   render() {
     const {state} = this.props
     return (
