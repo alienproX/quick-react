@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {updateFormAction, updateSelectAction, resetAction} from '../../actions/Form'
+import {updateData} from '../../actions/Form'
 import $ from '../../untils'
 import styles from './index.scss'
 
@@ -8,21 +8,14 @@ class Form extends Component {
   componentDidMount = () => {
     $.setDocTitle(`Form`)
   }
-  updateForm = (key, val, reg) => {
-    updateFormAction(this.props, key, val, reg)
-  }
+  updateForm = (key, val, reg) => updateData.updateForm(this.props, key, val, reg)
 
-  updateSelect = (e, key) => {
-    updateSelectAction(this.props, e, key)
-  }
+  updateSelect = (e, key) => updateData.updateSelect(this.props, e, key)
 
-  submit = () => {
-    alert(JSON.stringify(this.props.state))
-  }
+  submit = () => alert(JSON.stringify(this.props.state))
 
-  reset = () => {
-    resetAction(this.props)
-  }
+  reset = () => updateData.reset(this.props)
+
   render() {
     const {state} = this.props
     return (
