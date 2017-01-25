@@ -1,5 +1,6 @@
 export const UPDATE_FORM = 'UPDATE_FORM'
 export const RESET_FORM = 'RESET_FORM'
+import {NOTIFY_PUSH, NOTIFY_REMOVE} from './index.js'
 
 export const updateData = {
   updateSelect: (props, e, key) => {
@@ -19,5 +20,13 @@ export const updateData = {
   },
   reset: (props) => {
     props.dispatch({type: RESET_FORM})
+  },
+  notify: (props, val) => {
+    val.__id = new Date().getTime() + Math.floor(Math.random() * 10000000)
+    val.__remove = (item) => {
+      props.dispatch({type: NOTIFY_REMOVE, val: item})
+    }
+    val.delay = 3000
+    props.dispatch({type: NOTIFY_PUSH, val: val})
   }
 }

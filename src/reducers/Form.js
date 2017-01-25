@@ -14,7 +14,7 @@ export default(state = $.stateClone(initialState), action) => {
     case UPDATE_FORM:
       let temp = {}
       temp[action.key] = action.reg ? action.val.replace(new RegExp(action.reg), '') : action.val
-      return $.merge(state, temp)
+      return {...state, ...temp}
     case RESET_FORM:
       return $.stateClone(initialState)
     default:

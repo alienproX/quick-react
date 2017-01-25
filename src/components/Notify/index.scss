@@ -1,0 +1,59 @@
+.Notify {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+.ItemList {
+  width: 500px;
+  position: absolute;
+  left: 50%;
+  margin-left: -250px;
+}
+
+.Item {
+  background: #337ab7;
+  box-sizing: border-box;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 4px;
+  color: #fff;
+  border: 1px solid #2e6da4;
+  font-size: 14px;
+  position: relative;
+
+  &.success {
+    background: #5cb85c;
+    border: 1px solid #4cae4c;
+  }
+
+  &.info {
+    background: #5bc0de;
+    border: 1px solid #46b8da;
+  }
+
+  &.warning {
+    background: #f0ad4e;
+    border: 1px solid #eea236;
+  }
+
+  &.danger {
+    background: #d9534f;
+    border: 1px solid #d43f3a;
+  }
+
+  span {
+    font-family: arial!important;
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    right: 7px;
+    font-size: 20px;
+    top: 13px;
+    cursor: pointer;
+  }
+}

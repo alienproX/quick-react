@@ -16,6 +16,10 @@ class Form extends Component {
 
   reset = () => updateData.reset(this.props)
 
+  notify = (type) => {
+    updateData.notify(this.props, {text: 'notify', type: type})
+  }
+
   render() {
     const {state} = this.props
     return (
@@ -59,6 +63,11 @@ class Form extends Component {
           <li>
             <button onClick={this.submit}>SUBMIT</button>
             <button onClick={this.reset}>RESET</button>
+            <button onClick={() => this.notify()}>NOTIFY</button>
+            <button onClick={() => this.notify('success')}>NOTIFY success</button>
+            <button onClick={() => this.notify('info')}>NOTIFY info</button>
+            <button onClick={() => this.notify('warning')}>NOTIFY warning</button>
+            <button onClick={() => this.notify('danger')}>NOTIFY danger</button>
           </li>
         </ul>
       </div>
