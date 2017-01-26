@@ -1,27 +1,38 @@
 .Notify {
   position: fixed;
-  width: 100%;
+  width: 96%;
   top: 0;
   z-index: 100;
+  left: 2%;
 }
 
 .ItemList {
   width: 500px;
   position: absolute;
   left: 50%;
-  margin-left: -250px;
+  max-width: 100%;
 }
+.listWrap{
+  margin-left: -50%;
+  margin-right: 50%;
 
+}
 .Item {
   background: #337ab7;
   box-sizing: border-box;
-  padding: 15px;
-  margin: 10px 0;
+  padding: 10px 15px;
+  margin-top: 10px;
   border-radius: 4px;
   color: #fff;
   border: 1px solid #2e6da4;
   font-size: 14px;
   position: relative;
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  -webkit-animation-duration: 0.2s;
+  animation-duration: 0.2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 
   &.success {
     background: #5cb85c;
@@ -53,7 +64,44 @@
     line-height: 20px;
     right: 7px;
     font-size: 20px;
-    top: 13px;
+    top: 11px;
     cursor: pointer;
   }
+
+  p {
+    min-height: 14px;
+    line-height: 1.5;
+    padding-right: 20px;
+  }
+}
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0,-100%,0);
+    transform: translate3d(0,-100%,0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0,-100%,0);
+    transform: translate3d(0,-100%,0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
 }

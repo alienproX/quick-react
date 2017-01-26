@@ -9,7 +9,7 @@ class App extends Component {
     const {state} = this.props
     return (
       <div id="App">
-        <Notify data={state} />
+        <Notify data={state.notify} />
         <Header/>
         <div id="Main">
           {this.props.children}

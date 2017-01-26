@@ -22,11 +22,12 @@ export const updateData = {
     props.dispatch({type: RESET_FORM})
   },
   notify: (props, val) => {
-    val.__id = new Date().getTime() + Math.floor(Math.random() * 10000000)
+    val.__id = Math.random()
     val.__remove = (item) => {
       props.dispatch({type: NOTIFY_REMOVE, val: item})
     }
-    val.delay = 3000
+    val.showClose = true
+    val.delay = 0
     props.dispatch({type: NOTIFY_PUSH, val: val})
   }
 }

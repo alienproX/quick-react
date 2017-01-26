@@ -17,7 +17,7 @@ class Form extends Component {
   reset = () => updateData.reset(this.props)
 
   notify = (type) => {
-    updateData.notify(this.props, {text: 'notify', type: type})
+    updateData.notify(this.props, {text: 'For quick start a React Web App project. The project based on React, React Router, Redux, SASS and webpack.', type: type})
   }
 
   render() {
