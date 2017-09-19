@@ -7,9 +7,10 @@ import './assets/app.scss'
 class App extends Component {
   render() {
     const {state} = this.props
+      
     return (
       <div id="App">
-        <Notify data={state.notify} />
+        <Notify data={state.notify} ref={(notify) => this.notify = notify} />
         <Header/>
         <div id="Main">
           {this.props.children}
