@@ -10,10 +10,6 @@ import './assets/reset.scss'
 import routeConfig from './router'
 const store = configStore()
 
-browserHistory.listen(function(ev) {
-  console.log('listen', ev.pathname)
-})
-
 ReactDOM.render(
   <Provider store={store}>
   <Router history={browserHistory} routes={routeConfig}/>

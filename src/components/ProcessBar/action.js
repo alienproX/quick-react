@@ -1,10 +1,8 @@
-export default(store) => {
+export default() => {
   const setVal = (val, transition) => {
-    store.dispatch({
-      type: 'PROCESSBAR',
-      val: val + '%',
-      transition: transition
-    })
+    const processBar = document.querySelector('#_ProcessBar')
+    processBar.style.width = `${val}%`
+    processBar.style.transition = transition
   }
   let timer = null
   return {
