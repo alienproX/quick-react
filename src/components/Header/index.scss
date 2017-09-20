@@ -3,6 +3,7 @@ $maxWidth: 1000px;
 .header {
   background: #ffffff;
   padding: 0 20px;
+  box-shadow: 0 0 1px #777;
 
   ul {
     overflow: hidden;
@@ -21,14 +22,15 @@ $maxWidth: 1000px;
     li {
       float: left;
       display: block;
-      margin: 0 10px;
+      margin: 0 25px;
 
       a {
         display: block;
-        height: 44px;
+        height: 42px;
         line-height: 44px;
-        padding: 0 20px;
+        padding: 0 5px;
         color: #66757f;
+        border-bottom: 2px solid #ffffff;
       }
     }
   }
@@ -36,4 +38,5 @@ $maxWidth: 1000px;
 
 :global(a._menuActive) {
   color: #2196f3!important;
+  border-bottom: 2px solid #2196f3!important;
 }
