@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {updateData} from '../../actions/Counter'
+import {updateData} from '../../store/actions/Counter'
 import $ from '../../untils'
 import styles from './index.scss'
 

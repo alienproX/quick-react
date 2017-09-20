@@ -1,5 +1,5 @@
 import {UPDATE_FORM, RESET_FORM} from '../actions/Form'
-import $ from '../untils'
+import $ from '../../untils'
 
 const initialState = {
   text: '',

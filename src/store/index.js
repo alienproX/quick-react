@@ -1,8 +1,8 @@
 import {combineReducers, createStore} from 'redux'
-import headerReducer from '../reducers'
-import counterReducer from '../reducers/Counter'
-import todoReducer from '../reducers/Todo'
-import formReducer from '../reducers/Form'
+import headerReducer from './reducers'
+import counterReducer from './reducers/Counter'
+import todoReducer from './reducers/Todo'
+import formReducer from './reducers/Form'
 
 
 const rootReducer = combineReducers({

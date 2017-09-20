@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {updateData} from '../../actions/Form'
+import {updateData} from '../../store/actions/Form'
 import $ from '../../untils'
 import styles from './index.scss'
 
