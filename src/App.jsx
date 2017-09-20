@@ -22,8 +22,14 @@ class App extends Component {
       </div>
     )
   }
+  componentWillMount() {
+    setProcess.start()
+  }
   componentWillUpdate() {
     setProcess.start()
+  }
+  componentDidMount() {
+    setProcess.end()
   }
   componentDidUpdate() {
     setProcess.end()
