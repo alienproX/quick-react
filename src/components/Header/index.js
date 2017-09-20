@@ -11,6 +11,7 @@ class Header extends Component {
       <div className={styles.header}>
         <ProcessBar width={state.processBarWidth} transition={state.processTransition} />
         <ul>
+          <h1>Quick React</h1>
           <li>
             <IndexLink to="/" activeClassName="_menuActive">Home</IndexLink>
           </li>

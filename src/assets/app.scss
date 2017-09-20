@@ -1,5 +1,16 @@
+$maxWidth: 1000px;
+
 :global(#Main) {
   padding: 20px;
+  max-width: $maxWidth;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 4px;
+  margin-top: 15px;
+}
+
+body {
+  background: #e6ecf0;
 }
 
 input:not([type=checkbox]):not([type=radio]):not([type=range]),

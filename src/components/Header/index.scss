@@ -1,24 +1,39 @@
+$maxWidth: 1000px;
+
 .header {
-  background: #333;
+  background: #ffffff;
   padding: 0 20px;
 
   ul {
     overflow: hidden;
+    max-width: $maxWidth;
+    margin: 0 auto;
+
+    h1 {
+      float: left;
+      height: 44px;
+      line-height: 44px;
+      font-size: 20px;
+      margin-right: 50px;
+      color: #66757f;
+    }
 
     li {
       float: left;
       display: block;
+      margin: 0 10px;
 
       a {
         display: block;
-        height: 30px;
-        line-height: 30px;
-        padding: 0 15px;
+        height: 44px;
+        line-height: 44px;
+        padding: 0 20px;
+        color: #66757f;
       }
     }
   }
 }
 
-:global(._menuActive) {
-  background: #fff;
+:global(a._menuActive) {
+  color: #2196f3!important;
 }
