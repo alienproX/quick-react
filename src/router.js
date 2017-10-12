@@ -21,9 +21,9 @@ const routeConfig = {
         require.ensure([], (require) => callback(null, require('./views/Counter/index.jsx').default))
       }
     }, {
-      path: 'todo',
+      path: 'uikit',
       getComponent(nextState, callback) {
-        require.ensure([], (require) => callback(null, require('./views/Todo/index.jsx').default))
+        require.ensure([], (require) => callback(null, require('./views/UIkit/index.jsx').default))
       }
     }, {
       path: '*',

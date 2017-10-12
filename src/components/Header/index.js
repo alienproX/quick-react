@@ -19,7 +19,7 @@ class Header extends Component {
             <Link to="/counter" activeClassName="_menuActive">Counter</Link>
           </li>
           <li>
-            <Link to="/todo" activeClassName="_menuActive">Todo</Link>
+            <Link to="/uikit" activeClassName="_menuActive">UIkit</Link>
           </li>
           <li>
             <Link to="/form" activeClassName="_menuActive">Form</Link>
